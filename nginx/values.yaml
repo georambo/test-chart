@@ -10,7 +10,7 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 
 ingress:
@@ -28,7 +28,7 @@ ingress:
 
 persistence:
   enabled: true
-  storageClass: default
+  storageClass: standard
   accessMode: ReadWriteOnce
   size: 2Gi
 
